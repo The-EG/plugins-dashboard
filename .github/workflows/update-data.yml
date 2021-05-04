@@ -1,0 +1,29 @@
+name: "Update data/*.json"
+on:
+  schedule:
+    - cron: "5 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  update-data:
+    name: Run scripts/update_data.py
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout repo
+        with:
+          ref: gh-pages
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.7"
+      - name: Run script
+        run: |
+          python3 scripts/update_data.py
+      - name: Commit changes
+        uses: EndBug/add-and-acommit@v5
+        with:
+          message: 'Update data/*.json stats'
+          author_name: 'github-actions[bot]'
+          author_email: 'github-actions[bot]@users.noreply.github.com'
+          branch: gh-pages

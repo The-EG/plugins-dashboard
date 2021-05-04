@@ -1,0 +1,32 @@
+{
+  "name": "plugins-dashboard",
+  "private": true,
+  "description": "A dashboard for my OctoPrint plugins",
+  "version": "0.1.0",
+  "author": "Taylor Talkington",
+  "scripts": {
+    "build": "gatsby build --prefix-paths",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve --prefix-paths",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "fontsource-roboto": "^4.0.0",
+    "gatsby": "^3.4.0",
+    "gatsby-plugin-material-ui": "^3.0.1",
+    "gatsby-plugin-offline": "^4.4.0",
+    "gatsby-plugin-react-helmet": "^4.4.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "recharts": "^2.0.9"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
+  }
+}
