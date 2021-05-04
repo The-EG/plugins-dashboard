@@ -21,7 +21,7 @@ You can use this to track your own plugins!
 6. Add the token as a repo secret
   - Go to the newly forked repo settings
   - Go to 'Secrets'
-  - 'New Repository Secret' named `REPO_SECRET` and paste the token you copied above
+  - 'New Repository Secret' named `REPO_TOKEN` and paste the token you copied above
 7. Enable GH Pages on the `main` branch
   - Go to repo settings
   - Goto 'Pages'
