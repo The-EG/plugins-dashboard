@@ -41,5 +41,5 @@ jobs:
           cwd: "live"
           ref: "main"
           message: "deploy: ${{ github.sha }}"
-          author_name: "github-actions[bot]"
-          author_email: "github-actions[bot]@users.noreply.com"
+          author_name: 'github-actions[bot]'
+          author_email: 'github-actions[bot]@users.noreply.github.com'
