@@ -6,6 +6,9 @@ import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core/styles';
 
 import Grid from '@material-ui/core/Grid';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardHeader from '@material-ui/core/CardHeader';
 import Typography from '@material-ui/core/Typography';
 
 import VersionPieChart from '../components/plugin-version-pie';
@@ -13,6 +16,7 @@ import PluginGitHubInfo from '../components/plugin-github';
 import VersionLineChart from '../components/plugin-version-line';
 
 import pluginData from '../../data/stats.json';
+
 
 var versionPercHist = {};
 
@@ -36,7 +40,12 @@ const styles = theme => ({
   chartAxis: {
   },
   tooltipCard: {
-  }
+  },
+  card: {
+    margin: "2px",
+    background: theme.palette.primary.dark,
+    color: theme.palette.primary.contrastText
+  },
 });
 
 class PluginTile extends React.Component {
@@ -66,8 +75,12 @@ class PluginTile extends React.Component {
     return (
       <Paper className={classes.paper} >
         <Typography variant="h4">{ this.props.plugin.name }</Typography>
-        <Grid container direction="row" justify="center" wrap="wrap">
-          <Grid item xs={12} lg={4}>
+        <Grid container direction="row" justify="space-evenly" wrap="wrap" alignItems="flex-start">
+          <Grid item xs={12} lg={2}>
+              <Typography>Instances</Typography>
+              <Typography variant="h2">{ pluginData[this.props.plugin.id].total }</Typography>
+          </Grid>
+          <Grid item xs={12} lg={3}>
             <Typography>Instances by Version (30 days)</Typography>
             <VersionPieChart versionData={ versionData } versionColors={ versionColors } plugin={ this.props.plugin} />            
           </Grid>
@@ -75,7 +88,7 @@ class PluginTile extends React.Component {
             <Typography>Version History</Typography>
             <VersionLineChart versionData={ versionData } versionColors={ versionColors } plugin={ this.props.plugin} />
           </Grid>
-          <Grid item xs={12} lg={4}>
+          <Grid item xs={12} lg={3}>
             <Typography>GitHub Info</Typography>
             <PluginGitHubInfo plugin={ this.props.plugin } />
           </Grid>
