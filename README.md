@@ -10,7 +10,7 @@ It uses NodeJS, React, Material-UI, Recharts and Gatsby. The site is built from 
 You can use this to track your own plugins!
 
 1. Fork this repo
-3. Replace the contents each .json file in data/ with an empty object (`{}`)
+3. Replace the contents of each .json file in data/ with an empty object (`{}`)
 4. Update plugins-dashboard-config.json
 5. Setup a personal access token:
   - Go to your user settings
@@ -27,3 +27,6 @@ You can use this to track your own plugins!
   - Goto 'Pages'
   - Select the `main` branch and `/ (root)`
   - Click save
+8. Manually trigger the 'Update data/*.json' workflow
+
+After that, it should update once a day and automatically deploy
