@@ -7,7 +7,7 @@ It uses NodeJS, React, Material-UI, Recharts and Gatsby. The site is built from 
 
 ## Setup Your Own Dashboard
 
-You can use this to track your own dashboards!
+You can use this to track your own plugins!
 
 1. Fork this repo
 3. Replace the contents each .json file in data/ with an empty object (`{}`)
