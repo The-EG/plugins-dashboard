@@ -36,10 +36,9 @@ jobs:
           rm -rf live/*
           cp -r src/public/* live
       - name: Commit & deploy
-        uses: EndBug/add-and-commit@v5
+        uses: EndBug/add-and-commit@v7
         with:
           cwd: "live"
-          ref: "main"
+          branch: main
           message: "deploy: ${{ github.sha }}"
-          author_name: 'github-actions[bot]'
-          author_email: 'github-actions[bot]@users.noreply.github.com'
+          default_author: github_actions

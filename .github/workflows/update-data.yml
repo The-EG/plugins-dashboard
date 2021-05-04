@@ -21,9 +21,7 @@ jobs:
         run: |
           python3 scripts/update_data.py
       - name: Commit changes
-        uses: EndBug/add-and-commit@v5
+        uses: EndBug/add-and-commit@v7
         with:
           message: 'Update data/*.json stats'
-          author_name: 'github-actions[bot]'
-          author_email: 'github-actions[bot]@users.noreply.github.com'
-          branch: gh-pages
+          default_author: github_actions
