@@ -16,7 +16,7 @@ You can use this to track your own plugins!
   - Go to your user settings
   - Go to 'developer' settings
   - Go to 'personal access tokens'
-  - Click generate new token, give it a name, etc. 
+  - Click generate new token, give it a name, etc. Give it 'public_repo' access.
   - Copy the new token
 6. Add the token as a repo secret
   - Go to the newly forked repo settings
