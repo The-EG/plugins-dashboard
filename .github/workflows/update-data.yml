@@ -13,6 +13,7 @@ jobs:
         name: Checkout repo
         with:
           ref: gh-pages
+          token: ${{ secrets.REPO_TOKEN }}
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
