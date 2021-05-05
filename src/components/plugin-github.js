@@ -43,24 +43,26 @@ class PluginGitHubInfo extends React.Component {
           <Grid item>
               <Card className={ classes.card }>
                 <CardContent>
-                  <Typography variant="caption" color="textPrimary">Open Issues</Typography>
-                  <Grid container>
-                    <Grid item xs={12}>
-                      <Typography variant="h2" align="center" color="textPrimary">{ repo_stats[plugin.id].open_issues }</Typography>
+                  <Link href={`${plugin.url}/issues/`} target="_blank" rel="noopener" >
+                    <Typography variant="caption" color="textPrimary">Open Issues</Typography>
+                    <Grid container>
+                      <Grid item xs={12}>
+                        <Typography variant="h2" align="center" color="textPrimary">{ repo_stats[plugin.id].open_issues }</Typography>
+                      </Grid>
+                      <Grid item xs={4} className={classes.issuesContent}>
+                        <Typography variant="caption" noWrap color="textSecondary">FRs</Typography>
+                        <Typography variant="h4" align="center" color="textPrimary">{ repo_stats[plugin.id].open_frs}</Typography>
+                      </Grid>
+                      <Grid item xs={4} className={classes.issuesContent}>
+                        <Typography variant="caption" align="center" noWrap color="textSecondary">Bugs</Typography>
+                        <Typography variant="h4" align="center" color="textPrimary">{ repo_stats[plugin.id].conf_bugs}</Typography>
+                      </Grid>
+                      <Grid item xs={4} className={classes.issuesContent}>
+                        <Typography variant="caption" align="center" noWrap color="textSecondary">Need Info</Typography>
+                        <Typography variant="h4" align="center" color="textPrimary">{ repo_stats[plugin.id].open_need_info}</Typography>
+                      </Grid>
                     </Grid>
-                    <Grid item xs={4} className={classes.issuesContent}>
-                      <Typography variant="caption" noWrap color="textSecondary">FRs</Typography>
-                      <Typography variant="h4" align="center" color="textPrimary">{ repo_stats[plugin.id].open_frs}</Typography>
-                    </Grid>
-                    <Grid item xs={4} className={classes.issuesContent}>
-                      <Typography variant="caption" align="center" noWrap color="textSecondary">Bugs</Typography>
-                      <Typography variant="h4" align="center" color="textPrimary">{ repo_stats[plugin.id].conf_bugs}</Typography>
-                    </Grid>
-                    <Grid item xs={4} className={classes.issuesContent}>
-                      <Typography variant="caption" align="center" noWrap color="textSecondary">Need Info</Typography>
-                      <Typography variant="h4" align="center" color="textPrimary">{ repo_stats[plugin.id].open_need_info}</Typography>
-                    </Grid>
-                  </Grid>
+                  </Link>
                 </CardContent>
               </Card>
             </Grid>
