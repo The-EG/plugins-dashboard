@@ -13,20 +13,22 @@ You can use this to track your own plugins!
 3. Replace the contents of each .json file in data/ with an empty object (`{}`)
 4. Update plugins-dashboard-config.json
 5. Setup a personal access token:
-  - Go to your user settings
-  - Go to 'developer' settings
-  - Go to 'personal access tokens'
-  - Click generate new token, give it a name, etc. Give it 'public_repo' access.
-  - Copy the new token
+    1. Go to your user settings
+    2. Go to 'developer' settings
+    3. Go to 'personal access tokens'
+    4. Click generate new token, give it a name, etc. Give it 'public_repo' access.
+    5. Copy the new token
 6. Add the token as a repo secret
-  - Go to the newly forked repo settings
-  - Go to 'Secrets'
-  - 'New Repository Secret' named `REPO_TOKEN` and paste the token you copied above
+    1. Go to the newly forked repo settings
+    2. Go to 'Secrets'
+    3. 'New Repository Secret' named `REPO_TOKEN` and paste the token you copied above
+6. (Optional) rename the `the-eg` branch to your own liking. 
+    1. Update the reference to the above branch in .github/workflows/*.yml
 7. Enable GH Pages on the `main` branch
-  - Go to repo settings
-  - Goto 'Pages'
-  - Select the `main` branch and `/ (root)`
-  - Click save
+    1. Go to repo settings
+    2. Goto 'Pages'
+    3. Select the `main` branch and `/ (root)`
+    4. Click save
 8. Manually trigger the 'Update data/*.json' workflow
 
 After that, it should update once a day and automatically deploy
