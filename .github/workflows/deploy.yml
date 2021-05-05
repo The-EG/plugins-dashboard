@@ -2,7 +2,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - gh-pages
+      - the-eg
 
 jobs:
   build-and-push:
@@ -11,7 +11,7 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v2
         with:
-          ref: gh-pages
+          ref: the-eg
           path: src
       - name: Checkout current
         uses: actions/checkout@v2
