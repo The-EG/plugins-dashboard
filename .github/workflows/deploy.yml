@@ -26,7 +26,7 @@ jobs:
         run: |
           npm install -g npm@7
           cd src
-          npm install
+          npm install --no-audit
       - name: Build site
         run: |
           cd src
