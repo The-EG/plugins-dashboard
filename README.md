@@ -10,7 +10,7 @@ It uses NodeJS, React, Material-UI, Recharts and Gatsby. The site is built from 
 You can use this to track your own plugins!
 
 1. Fork this repo
-3. Replace the contents of each .json file in data/ with an empty object (`{}`)
+3. In branch `the-eg`, replace the contents of each .json file in data/ with an empty object (`{}`)
 4. Update plugins-dashboard-config.json
 5. Setup a personal access token:
     1. Go to your user settings
@@ -23,7 +23,7 @@ You can use this to track your own plugins!
     2. Go to 'Secrets'
     3. 'New Repository Secret' named `REPO_TOKEN` and paste the token you copied above
 6. (Optional) rename the `the-eg` branch to your own liking. 
-    1. Update the reference to the above branch in .github/workflows/*.yml
+    1. Update the reference to the above branch in .github/workflows/*.yml (in branch `gh-pages`)
 7. Enable GH Pages on the `main` branch
     1. Go to repo settings
     2. Goto 'Pages'
