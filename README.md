@@ -31,4 +31,13 @@ You can use this to track your own plugins!
     4. Click save
 8. Manually trigger the 'Update data/*.json' workflow
 
-After that, it should update once a day and automatically deploy
+After that, it should update once a day and automatically deploy.
+
+If I make updates that you'd like to incorporate to your fork later:
+
+1. Clone your fork locally
+2. Setup this repo as upstream: `git remote add upstream https://github.com/The-EG/plugins-dashboard.git`
+3. While on your `gh-pages` branch, pull my `gh-pages` branch: `git pull upstream gh-pages`
+4. Push the changes back up to yours: `git push`
+5. Switch to your data branch, ie `the-eg`, and merge in gh-pages: `git merge gh-pages`
+6. Push those changes up too: `git push`
