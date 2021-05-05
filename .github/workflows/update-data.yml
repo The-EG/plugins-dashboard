@@ -26,3 +26,4 @@ jobs:
         with:
           message: 'Update data/*.json stats'
           default_author: github_actions
+          branch: the-eg
