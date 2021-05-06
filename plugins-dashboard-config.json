@@ -2,6 +2,6 @@
   "gitHubUser": "The-EG",
   "plugins": [
     {"id": "camerasettings", "name": "Camera Settings", "url": "https://github.com/The-EG/OctoPrint-CameraSettings", "repo": "OctoPrint-CameraSettings"},
-    {"id": "ublmeshedit", "name": "UBL Mesh Editor", "url": "https://github.com/The-EG/OctoPrint-UblMeshEditor", "repo": "OctoPrint-UBLMeshEdit"}
+    {"id": "ublmeshedit", "name": "UBL Mesh Editor", "url": "https://github.com/The-EG/OctoPrint-UblMeshEdit", "repo": "OctoPrint-UBLMeshEdit"}
   ]
 }
