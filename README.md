@@ -4,6 +4,36 @@ This is the source for https://the-eg.github.io/plugins-dashboard .
 
 It uses NodeJS, React, Material-UI, Recharts and Gatsby. The site is built from the gh-pages branch and copied to the main branch where it is served using github pages.
 
+## How it works in detail
+The application loads the plugin-stats for all defined plugins from https://data.octoprint.org/export/plugin_stats_30d.json and builds the webpage out of this data.
+
+This repository includes three branches and two actions.
+
+### Branches
+- ```main```: contains the statistics data (don't touch it)
+- ```gh-pages```: includes the web-application which are later published to: ```https://<gitHubUser>.github.io/plugins-dashboard/``` (modify if you like)
+- ```the-eg```: includes the configuration and the pipeline action-scripts (you can rename it to your own GitHubUser-Name)
+
+### Actions
+- ```Update data/*.json```: download the stats (if not executed succesful we can't build the page)
+- ```Build and Deploy```: reads  the downloaded data and creates the dashboard
+
+### plugins-dashboard-config.json
+This file includes all plugins which you want to show in your dashboard.
+```
+{
+  "gitHubUser": "The-EG",
+  "plugins": [
+    {"id": "camerasettings", "name": "Camera Settings", "url": "https://github.com/The-EG/OctoPrint-CameraSettings", "repo": "OctoPrint-CameraSettings"},
+    {"id": "ublmeshedit", "name": "UBL Mesh Editor", "url": "https://github.com/The-EG/OctoPrint-UblMeshEditor", "repo": "OctoPrint-UBLMeshEdit"}
+  ]
+}
+```
+- ```gitHubUser```: Your github account name
+- ```id``` id of your plugin, listed in plugins.octoprint.org (all lowercase). This id must be in the plugin_stats_30d.json response
+- ```name```: Displayname of the Plugin in the dashboard
+- ```url```: Repository URL
+- ```repo```: Name of the repository
 
 ## Setup Your Own Dashboard
 
