@@ -36,6 +36,8 @@ class DataUpdater:
 
             # remove the current date if it exists
             stats[pid]['history'] = [x for x in stats[pid]['history'] if x['date']!=dt.strftime('%Y-%m-%d')]
+            # remove old history
+            stats[pid]['history'] = [x for x in stats[pid]['history'] if (datetime.datetime.now()-datetime.datetime.strptime(x['date'], '%Y-%m-%d')).days <= 30]
             stats[pid]['history'].append({
                 'date': dt.strftime('%Y-%m-%d'),
                 'total': stats30['instances'],
